@@ -18,7 +18,8 @@ class AuthorTestCase(TestCase):
 
     def test_str_native(self):
         # django native
-        author = Author.objects.create(name=self.name, birthday_year=self.birthday_year)
+        # author = Author.objects.create(name=self.name, birthday_year=self.birthday_year)
+        author = Author(name=self.name, birthday_year=self.birthday_year)
         self.assertEqual(f'{self.name}: {self.birthday_year}', str(author))
 
     def test_str_mixer(self):
