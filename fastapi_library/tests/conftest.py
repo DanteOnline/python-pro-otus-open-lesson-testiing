@@ -26,11 +26,12 @@ async def prepare_database():
 
 @pytest_asyncio.fixture
 async def session():
-    async with AsyncSessionLocal() as session:
-        yield session
+    async with AsyncSessionLocal() as current_session:
+        yield current_session
 
 
 @pytest_asyncio.fixture
 def author_data():
-    with open(os.path.join("tests", "data", "author.json")) as f:
+    filepath = os.path.join("tests", "data", "author.json")
+    with open(filepath, encoding='utf-8') as f:
         return json.load(f)

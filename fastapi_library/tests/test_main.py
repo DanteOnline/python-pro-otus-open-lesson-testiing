@@ -1,7 +1,4 @@
-# tests/test_main.py
-
 import pytest
-from main import app
 from app.models import Author
 from app.database import AsyncSessionLocal
 

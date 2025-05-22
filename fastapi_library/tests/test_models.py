@@ -1,6 +1,7 @@
 import pytest
-from app.models import Author
 from async_factory_boy.factory.sqlalchemy import AsyncSQLAlchemyFactory
+from app.models import Author
+
 
 
 @pytest.mark.asyncio
