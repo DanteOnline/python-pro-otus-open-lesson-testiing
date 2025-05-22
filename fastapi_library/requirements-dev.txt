@@ -2,3 +2,4 @@ pytest-cov==6.1.1
 pytest-asyncio==0.26.0
 async_factory_boy==1.0.1
 gevent==25.5.1
+pylint==3.3.7
