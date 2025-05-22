@@ -1,0 +1,6 @@
+[run]
+omit =
+    library/asgi.py
+    library/wsgi.py
+    manage.py
+    */management/*

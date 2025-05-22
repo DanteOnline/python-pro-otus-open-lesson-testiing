@@ -11,7 +11,7 @@ class AuthorTestCase(TestCase):
 
     def setUp(self):
         filepath = os.path.join(settings.BASE_DIR, 'authors', 'tests', 'data', 'author.json')
-        with open(filepath) as f:
+        with open(filepath, encoding='utf-8') as f:
             author_data = json.load(f)
             self.name = author_data['name']
             self.birthday_year = author_data['birthday_year']
